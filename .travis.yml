@@ -1,11 +1,17 @@
+#everytime we push to github travis will do this!
+
+#spins up python 3.6
 language: python
 python:
   - "3.6"
 
+#make the docker available
 services:
   - docker
 
+#makes pip to install docker compose
 before_script: pip install docker-compose
 
+#and then run this script.
 script:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py test_models"
