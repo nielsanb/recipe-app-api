@@ -21,3 +21,7 @@ class ModelTests(TestCase):
         user = get_user_model().objects.create_user(email, 'test123')
 
         self.assertEqual(user.email, email.lower())
+
+    def test_testing(self):
+        """Tests if tests are run. Inception ..."""
+        self.assertEqual(1,1)
